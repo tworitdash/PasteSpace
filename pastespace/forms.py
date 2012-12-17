@@ -1,0 +1,46 @@
+from flask.ext import wtf
+from flask.ext.wtf import validators
+
+
+class PasteForm(wtf.Form):
+    title = wtf.TextField('Title', [validators.Required()])
+    text = wtf.TextAreaField('Your Paste', [validators.Required()])
+    language = wtf.SelectField('Select A Language', choices=[('text', 'Plain Text'),
+                                                     ('python', 'Python'),
+                                                     ('py3', 'Python3'),
+                                                     ('ruby', 'Ruby'),
+                                                     ('cpp', 'C++'),
+                                                     ('c', 'C'),
+                                                     ('java', 'Java'),
+                                                     ('js', 'JavaScript'),
+                                                     ('html', 'HTML'),
+                                                     ('css', 'CSS'),
+                                                     ('perl', 'Perl'),
+                                                     ('pycon', 'Python Console'),
+                                                     ('pytb', 'Python Traceback'),
+                                                     ('irb', 'Ruby Console'),                                                     ('ruby', 'Ruby'),
+                                                     ('bash', 'Bash'),
+                                                     ('console', 'Console'),
+                                                     ('bat', 'Bat'),
+                                                     ('posh', 'Powershell'),                                                     ('ruby', 'Ruby'),
+                                                     ('sql', 'SQL'),
+                                                     ('jinja', 'Django or Jinja2'),
+                                                     ('d', 'D'),
+                                                     ('fortan', 'FORTAN'),
+                                                     ('lua', 'Lua'),
+                                                     ('go', 'Go'),
+                                                     ('c#', 'C#'),                                                     ('ruby', 'Ruby'),
+                                                     ('vbnet', 'Visual Basic .NET'),
+                                                     ('cl', 'Common Lisp'),
+                                                     ('erlang', 'Erlang'),                                                     ('ruby', 'Ruby'),
+                                                     ('hs', 'Haskell'),
+                                                     ('ocaml', 'Ocaml'),
+                                                     ('scheme', 'Scheme'),                                                     ('ruby', 'Ruby'),
+                                                     ('numpy', 'Numpy'),
+                                                     ('matlab', 'MatLab'),
+                                                     ('scala', 'Scala'),
+                                                     ('clojure', 'Clojure'),                                                     ('ruby', 'Ruby'),
+                                                     ('bf', 'BrainFuck'),
+                                                     ('smalltalk', 'Smalltalk'),
+                                                     ('ruby', 'Ruby'),
+                                                     ])

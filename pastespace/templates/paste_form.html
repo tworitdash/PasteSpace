@@ -4,29 +4,15 @@
 </head>
 <body>
 	<h1>Enter your text here</h1>
-	<form id="new-paste" name="paste" action="/new" method="post">
-		<label name="title">Title:</label>
-		<input type="text" name="title">
-		<label name='lang'>Language</label>
-		<select name='lang'>
-		  <option value="text">Plain Text</option>
-		  <option value="python">Python</option>
-		  <option value="ruby">Ruby</option>
-		  <option value="perl">Perl</option>
-		  <option value="js">JavaScript</option>
-		  <option value="css">CSS</option>
-		  <option value="html">HTML</option>
-		  <option value="c">C</option>
-		  <option value="java">Java</option>
-		  <option value="cpp">C++</option>
-		  <option value="pycon">Python Console</option>
-		  <option value="pytb">Python Traceback</option>
-		  <option value="irb">Ruby Console</option>
-		</select>
-		<br>
-		<textarea name="text" rows="20" cols="80"></textarea>
-		<br>
-		<input type="submit" value="submit">
+	{% from "_formhelpers.html" import render_field %}
+	<form method=post action="/new">
+		{{ form.hidden_tag() }}
+	  <dl>
+	    {{ render_field(form.title) }}
+	    {{ render_field(form.language) }}
+	    {{ render_field(form.text, rows=5, cols=100) }}
+	  </dl>
+	  <p><input type=submit value=Submit>
 	</form>
 </body>
 </html>
