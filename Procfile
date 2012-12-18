@@ -1,1 +1,1 @@
-web: python pastespace/app.py
+web: python run.py
