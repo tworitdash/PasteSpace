@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Pastes in {{ lang }}</title>
+	</head>
+	<body>
+		<h2>Pastes in {{ lang }}</h2>
+		<ul>
+			{% for paste in pastes %}
+			<li>
+				<a href="/show/{{paste.id}}">{{paste.title}}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>

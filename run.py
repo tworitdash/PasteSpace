@@ -1,3 +1,3 @@
 #!flask/bin/python
-from pastespace import app
+from pastespace.app import app
 app.run(debug = True)

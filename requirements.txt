@@ -4,8 +4,12 @@ Flask-WTF==0.8.2
 Jinja2==2.6
 Pygments==1.5
 SQLAlchemy==0.8.0b2
+Tempita==0.5.1
 WTForms==1.0.2
 Werkzeug==0.8.3
 argparse==1.2.1
+decorator==3.4.0
 distribute==0.6.31
+ipython==0.13.1
+sqlalchemy-migrate==0.7.2
 wsgiref==0.1.2
